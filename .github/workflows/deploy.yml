@@ -21,7 +21,7 @@ jobs:
 
             - name: Node.js 버전체크
               run: node -v
-            - run: npm --force ci
+            - run: npm install --force
             - name: Build Production.
               run: CI=false npm run build --if-present
               
