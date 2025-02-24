@@ -18,6 +18,9 @@ jobs:
               with:
                 node-version: ${{ matrix.node-version }}
                 cache: "npm"
+
+            - name: Node.js 버전체크
+              run: node -v
             - run: npm --force ci
             - name: Build Production.
               run: CI=false npm run build --if-present
